@@ -11,13 +11,13 @@ module.exports.sendEmail = (req, res) => {
     let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
 
     const name = req.body.name;
-    const phone = req.body.number;
+    const type = req.body.type;
     const email = req.body.email;
     const message = req.body.message;
     const html = `
         <h3>You've Received an Inquiry From ${name}</h3>
         <p>Name: ${name}</p>
-        <p>Phone Number: ${phone}</p>
+        <p>Type: ${type}</p>
         <p>Email Address: ${email}</p>
         <p>Message: ${message}</p>
     `;
