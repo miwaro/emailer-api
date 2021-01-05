@@ -25,7 +25,7 @@ module.exports.sendEmail = (req, res) => {
     sendSmtpEmail.subject = `New Website Inquiry from ${name}`;
     sendSmtpEmail.htmlContent = html;
     sendSmtpEmail.sender = { "name": "Knecht Insurance Website Inquiries", "email": "knechtinquires@gmail.com" };
-    sendSmtpEmail.to = [{ "email": "shanehobson1@gmail.com", "name": "Knecht Insurance" }];
+    sendSmtpEmail.to = [{ "email": "knecht@fireflyagency.com", "name": "Knecht Insurance" }];
     sendSmtpEmail.cc = [{ "email": "knechtinquires@gmail.com", "name": "Knecht Insurance Website Inquiries" }];
     sendSmtpEmail.bcc = [{ "email": "knechtinquires@gmail.com", "name": "Knecht Insurance Website Inquiries" }];
     sendSmtpEmail.replyTo = { "email": email, "name": name };
