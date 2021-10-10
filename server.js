@@ -55,7 +55,6 @@ app.post('/', (req, res) => {
 
     // Verify URL
     const verifyUrl = `https://google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${req.body.captcha}&remoteip=${req.connection.remoteAddress}`;
-    emailer.sendEmail(req, res);
 
     // Make Request To VerifyURL
     request(verifyUrl, (err, response, body) => {
@@ -67,6 +66,8 @@ app.post('/', (req, res) => {
                 "success": false,
                 "msg": "Failed Captcha Verification"
             })
+        } else {
+            emailer.sendEmail(req, res);
         }
 
         // If Successful
