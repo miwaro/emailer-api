@@ -8,6 +8,7 @@
     "express": "^4.17.1",
     "gpg": "^0.6.0",
     "nodemailer": "^4.6.6",
+    "request": "^2.88.2",
     "secret": "^1.0.2",
     "sib-api-v3-sdk": "^8.1.0",
     "uuid": "^8.3.2"
